@@ -10,3 +10,19 @@
 
 /* Team selection and roster popups */
 .roster-overview{padding:0 0 80px}.roster-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.roster-choice{display:block;padding:28px;border:1px solid var(--line);border-radius:12px;background:radial-gradient(ellipse at 50% 35%,#39326355,transparent 70%),#11162b;transition:transform .2s,border-color .2s,box-shadow .2s}.roster-choice:hover{transform:translateY(-4px);border-color:var(--purple);box-shadow:0 12px 35px #0003}.roster-choice img{display:block;width:100%;height:260px;object-fit:contain}.roster-choice-info{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--line);padding-top:22px}.roster-choice-info h2{font-size:30px}.roster-choice-info p{margin:8px 0 0;font-size:12px;color:var(--muted)}.roster-choice-info>span{font-size:12px;color:var(--purple)}.roster-modal-open{overflow:hidden}.roster-dialog{color:var(--text);background:#10152a;border:1px solid #3b4262;border-radius:14px;padding:0;width:min(1120px,calc(100% - 40px));max-height:90dvh;overflow:auto;box-shadow:0 25px 100px #0009}.roster-dialog[open]{animation:roster-enter .22s ease-out}.roster-dialog::backdrop{background:#030611c9;backdrop-filter:blur(6px)}.dialog-content{padding:45px 35px 35px}.dialog-close{position:sticky;top:12px;float:right;margin:12px 12px -52px 0;z-index:2;width:38px;height:38px;border:1px solid #414969;border-radius:50%;background:#202640;color:white;font-size:26px;line-height:1;cursor:pointer}.dialog-close:hover{background:#373052}.dialog-close:focus-visible{outline:3px solid var(--blue);outline-offset:3px}.roster-dialog .section-heading{padding-right:25px}.roster-dialog .player-grid{clear:both}@keyframes roster-enter{from{opacity:0;transform:scale(.96) translateY(12px)}to{opacity:1;transform:scale(1) translateY(0)}}@media(max-width:600px){.roster-card-grid{grid-template-columns:1fr;gap:18px}.roster-choice{padding:20px}.roster-choice img{height:220px}.roster-choice-info h2{font-size:26px}.roster-dialog{width:calc(100% - 16px);max-height:95dvh;border-radius:10px}.dialog-content{padding:50px 16px 24px}.roster-dialog .section-heading{padding-right:0}.roster-dialog .player-art{height:170px}}@media(prefers-reduced-motion:reduce){.roster-dialog[open]{animation:none}.roster-choice:hover{transform:none}}
+
+/* Neon accents drawn from each team emblem. */
+.roster-choice[data-roster="dusk"],.roster-dialog#dusk{--team-neon:57,217,255}
+.roster-choice[data-roster="dawn"],.roster-dialog#dawn{--team-neon:255,103,57}
+.roster-choice[data-roster="pure"],.roster-dialog#pure{--team-neon:255,65,87}
+.roster-choice[data-roster="solar"],.roster-dialog#solar{--team-neon:255,193,57}
+.roster-choice{border-color:rgba(var(--team-neon),.65);box-shadow:0 0 0 1px rgba(var(--team-neon),.08),0 0 22px rgba(var(--team-neon),.11),inset 0 0 22px rgba(var(--team-neon),.04);background:radial-gradient(ellipse at 50% 35%,rgba(var(--team-neon),.09),transparent 70%),#11162b;transition:transform .2s,border-color .2s,box-shadow .2s}
+.roster-choice:hover,.roster-choice:focus-visible{border-color:rgb(var(--team-neon));box-shadow:0 0 0 1px rgba(var(--team-neon),.2),0 0 30px rgba(var(--team-neon),.24),inset 0 0 25px rgba(var(--team-neon),.07)}
+.roster-choice-info>span{color:rgb(var(--team-neon))}
+.roster-dialog{border-color:rgba(var(--team-neon),.7);box-shadow:0 25px 100px #0009,0 0 30px rgba(var(--team-neon),.18),inset 0 0 25px rgba(var(--team-neon),.035)}
+.roster-dialog .badge{border-color:rgba(var(--team-neon),.3)}
+
+/* Slow orbit around the homepage emblem; artwork stays steady. */
+.hero-art .orbit{animation:nte-orbit 24s linear infinite;transform-origin:center;pointer-events:none}
+@keyframes nte-orbit{from{transform:rotate(18deg)}to{transform:rotate(378deg)}}
+@media(prefers-reduced-motion:reduce){.hero-art .orbit{animation:none}}
