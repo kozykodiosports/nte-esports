@@ -38,3 +38,6 @@
 .teams-section .team-card{border-color:rgba(var(--team-neon),.65);box-shadow:0 0 0 1px rgba(var(--team-neon),.08),0 0 22px rgba(var(--team-neon),.11),inset 0 0 22px rgba(var(--team-neon),.04);background:radial-gradient(ellipse at 50% 35%,rgba(var(--team-neon),.09),transparent 70%),#11162b;transition:border-color .2s,box-shadow .2s}
 .teams-section .team-card:hover,.teams-section .team-card:focus-visible{border-color:rgb(var(--team-neon));box-shadow:0 0 0 1px rgba(var(--team-neon),.2),0 0 30px rgba(var(--team-neon),.24),inset 0 0 25px rgba(var(--team-neon),.07)}
 .teams-section .team-card .eyebrow,.teams-section .team-card .team-bottom span:last-child{color:rgb(var(--team-neon))}
+
+/* Staff and coach slots in the Dusk roster. */
+.team-management{margin-bottom:28px}.team-management>.eyebrow{margin-bottom:15px}.management-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;align-items:start}.management-grid .staff-card{margin:0}.coach-card .player-art{height:205px}@media(max-width:950px){.management-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.management-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.coach-card .player-art{height:170px}}
