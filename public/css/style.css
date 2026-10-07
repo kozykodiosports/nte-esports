@@ -22,7 +22,11 @@
 .roster-dialog{border-color:rgba(var(--team-neon),.7);box-shadow:0 25px 100px #0009,0 0 30px rgba(var(--team-neon),.18),inset 0 0 25px rgba(var(--team-neon),.035)}
 .roster-dialog .badge{border-color:rgba(var(--team-neon),.3)}
 
-/* Slow orbit around the homepage emblem; artwork stays steady. */
-.hero-art .orbit{animation:nte-orbit 24s linear infinite;transform-origin:center;pointer-events:none}
-@keyframes nte-orbit{from{transform:rotate(18deg)}to{transform:rotate(378deg)}}
-@media(prefers-reduced-motion:reduce){.hero-art .orbit{animation:none}}
+/* Stationary ring with a glowing dot traveling around its edge. */
+.hero-art .orbit{animation:none;pointer-events:none}
+.hero-art .orbit:after{inset:0;width:auto;height:auto;border-radius:50%;background:transparent;box-shadow:none;background-image:radial-gradient(circle at 79% 20%,var(--blue) 0 5px,rgba(82,185,255,.6) 6px,rgba(82,185,255,.15) 11px,transparent 22px);animation:nte-dot-orbit 24s linear infinite;transform-origin:center}
+@keyframes nte-dot-orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.hero-art .orbit:after{animation:none}}
+
+/* Soft glow for the homepage tagline. */
+.hero-copy h1 span{text-shadow:0 0 14px rgba(178,145,255,.32),0 0 34px rgba(124,58,237,.2)}
