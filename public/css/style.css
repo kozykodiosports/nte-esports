@@ -22,11 +22,19 @@
 .roster-dialog{border-color:rgba(var(--team-neon),.7);box-shadow:0 25px 100px #0009,0 0 30px rgba(var(--team-neon),.18),inset 0 0 25px rgba(var(--team-neon),.035)}
 .roster-dialog .badge{border-color:rgba(var(--team-neon),.3)}
 
-/* Stationary ring with a glowing dot traveling around its edge. */
+/* The dot follows the stationary ring's elliptical border. */
 .hero-art .orbit{animation:none;pointer-events:none}
-.hero-art .orbit:after{inset:0;width:auto;height:auto;border-radius:50%;background:transparent;box-shadow:none;background-image:radial-gradient(circle at 79% 20%,var(--blue) 0 5px,rgba(82,185,255,.6) 6px,rgba(82,185,255,.15) 11px,transparent 22px);animation:nte-dot-orbit 24s linear infinite;transform-origin:center}
-@keyframes nte-dot-orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hero-art .orbit:after{inset:auto;left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--blue);background-image:none;box-shadow:0 0 12px rgba(82,185,255,.8),0 0 25px rgba(82,185,255,.45);offset-path:ellipse(50% 50% at 50% 50%);offset-anchor:center;offset-rotate:0deg;offset-distance:0%;animation:nte-dot-orbit 24s linear infinite;transform:none}
+@keyframes nte-dot-orbit{from{offset-distance:0%}to{offset-distance:100%}}
 @media(prefers-reduced-motion:reduce){.hero-art .orbit:after{animation:none}}
-
 /* Soft glow for the homepage tagline. */
 .hero-copy h1 span{text-shadow:0 0 14px rgba(178,145,255,.32),0 0 34px rgba(124,58,237,.2)}
+
+/* Homepage cards share the team colors used on Rosters. */
+.team-card[href$="#dusk"]{--team-neon:57,217,255}
+.team-card[href$="#dawn"]{--team-neon:255,103,57}
+.team-card[href$="#pure"]{--team-neon:255,65,87}
+.team-card[href$="#solar"]{--team-neon:255,193,57}
+.teams-section .team-card{border-color:rgba(var(--team-neon),.65);box-shadow:0 0 0 1px rgba(var(--team-neon),.08),0 0 22px rgba(var(--team-neon),.11),inset 0 0 22px rgba(var(--team-neon),.04);background:radial-gradient(ellipse at 50% 35%,rgba(var(--team-neon),.09),transparent 70%),#11162b;transition:border-color .2s,box-shadow .2s}
+.teams-section .team-card:hover,.teams-section .team-card:focus-visible{border-color:rgb(var(--team-neon));box-shadow:0 0 0 1px rgba(var(--team-neon),.2),0 0 30px rgba(var(--team-neon),.24),inset 0 0 25px rgba(var(--team-neon),.07)}
+.teams-section .team-card .eyebrow,.teams-section .team-card .team-bottom span:last-child{color:rgb(var(--team-neon))}
