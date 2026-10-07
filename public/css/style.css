@@ -45,3 +45,5 @@
 /* Organization management */
 .org-management{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding-bottom:80px}.management-profile{padding:32px;border:1px solid #403353;border-radius:10px;background:linear-gradient(120deg,#25203c,#11162b);box-shadow:0 0 20px #a58aff0a}.management-profile .eyebrow{line-height:1.7;letter-spacing:1.5px}.management-profile h2{font-size:32px}.management-description:empty{display:none}
 @media(max-width:600px){header{flex-wrap:wrap;gap:18px}nav{flex-wrap:wrap;gap:19px}.org-management{grid-template-columns:1fr;gap:18px;padding-bottom:55px}.management-profile{padding:25px}}
+
+.management-pfp{display:block;width:180px;height:180px;max-width:100%;object-fit:cover;border-radius:6px;margin-bottom:24px;border:1px solid var(--line)}
