@@ -57,3 +57,5 @@ body::before,body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-ev
 body::after{background-position:417px 283px;animation-duration:11s;animation-delay:-5s}
 @keyframes star-twinkle{0%,100%{opacity:.08}48%{opacity:.7}65%{opacity:.35}}
 @media(prefers-reduced-motion:reduce){body::before,body::after{animation:none;opacity:.25}}
+
+.team-roster-heading{margin:30px 0 20px;padding-top:24px;border-top:1px solid var(--line);text-transform:uppercase}
