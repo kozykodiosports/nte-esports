@@ -69,3 +69,5 @@ body::after{background-position:417px 283px;animation-duration:11s;animation-del
 .player-social:hover .social-caption,.player-social:focus-visible .social-caption{opacity:1}
 .player-social:hover .social-corner,.player-social:focus-visible .social-corner{opacity:0}
 @media(hover:none){.player-social .social-corner{opacity:1}.player-social .social-caption{display:none}}
+
+.social-updates{padding:0 0 70px}.social-feed{max-width:650px;margin:0 auto;padding:20px;background:#0b1020;border:1px solid var(--line);border-radius:10px;overflow:hidden}.social-feed>a{color:var(--purple)}.social-feed-note{text-align:center;color:var(--muted);font-size:12px;margin:18px 0 0}.social-feed-note a{color:var(--purple)}@media(max-width:600px){.social-updates .section-heading{flex-direction:column;gap:16px}.social-feed{padding:12px}}
