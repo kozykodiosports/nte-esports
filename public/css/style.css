@@ -89,3 +89,11 @@ body::after{background-position:417px 283px;animation-duration:11s;animation-del
 @keyframes halloween-fog-drift{from{transform:translateX(-3%)}to{transform:translateX(3%)}}
 @media(max-width:600px){.halloween-web{width:75px;height:75px;opacity:.12}.halloween-moon{width:165px;right:-8px;top:-24px}.halloween-fog{height:150px;opacity:.26}}
 @media(prefers-reduced-motion:reduce){.halloween-fog{animation:none}}
+
+/* Stronger haunted-night details, kept outside the main reading area. */
+.halloween-theme{background-image:url('../images/stars.svg'),radial-gradient(ellipse at 5% 0%,#52206744,transparent 42%),radial-gradient(ellipse at 95% 0%,#b348182b,transparent 40%);background-size:1600px 1200px,100% 100%,100% 100%;background-repeat:repeat,no-repeat,no-repeat}
+.halloween-web{width:260px;height:260px;opacity:.62;filter:drop-shadow(0 0 5px #c6b1ef44)}
+.web-right{width:210px;height:210px;opacity:.49}
+.halloween-moon{opacity:.57;box-shadow:0 0 75px #be99ef44,0 0 125px #fa7b2620}
+.halloween-fog{bottom:-45px;height:270px;opacity:.65}
+@media(max-width:600px){.halloween-web{width:125px;height:125px;opacity:.48}.web-right{width:105px;height:105px;opacity:.38}.halloween-fog{height:180px;opacity:.42}}
