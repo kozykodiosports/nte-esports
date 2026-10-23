@@ -71,3 +71,21 @@ body::after{background-position:417px 283px;animation-duration:11s;animation-del
 @media(hover:none){.player-social .social-corner{opacity:1}.player-social .social-caption{display:none}}
 
 .social-updates{padding:0 0 70px}.social-feed{max-width:650px;margin:0 auto;padding:20px;background:#0b1020;border:1px solid var(--line);border-radius:10px;overflow:hidden}.social-feed>a{color:var(--purple)}.social-feed-note{text-align:center;color:var(--muted);font-size:12px;margin:18px 0 0}.social-feed-note a{color:var(--purple)}@media(max-width:600px){.social-updates .section-heading{flex-direction:column;gap:16px}.social-feed{padding:12px}}
+
+/* Seasonal Halloween layer. Remove halloween-theme from body to switch it off. */
+.halloween-theme{--halloween-orange:#ffa45b;background-color:#03050c}
+.halloween-theme nav a[aria-current]{border-bottom-color:var(--halloween-orange)}
+.halloween-theme nav a:hover{color:var(--halloween-orange)}
+.halloween-theme .button{background:#ffad68;color:#211127;box-shadow:0 0 20px #fb893516}
+.halloween-theme .button:hover{background:#ffc28e}
+.halloween-theme .hero-copy>.eyebrow{color:var(--halloween-orange)}
+.halloween-theme .hero-art .orbit:after{background:#ffad68;box-shadow:0 0 12px #ff9a61aa,0 0 25px #ff9a6155}
+.halloween-theme .hero-art{isolation:isolate}
+.halloween-moon{position:absolute;z-index:-1;width:240px;aspect-ratio:1;right:-12px;top:-52px;border-radius:50%;opacity:.28;background:radial-gradient(circle at 34% 30%,#70698355 0 7%,transparent 8%),radial-gradient(circle at 66% 60%,#625c7955 0 10%,transparent 11%),radial-gradient(circle at 43% 72%,#625c7944 0 5%,transparent 6%),radial-gradient(circle at 40% 35%,#eee0d1,#a696b1 62%,#574c70);box-shadow:0 0 65px #d5b6ff25}
+.halloween-decor{position:fixed;inset:0;pointer-events:none;z-index:3;overflow:hidden}
+.halloween-web{position:absolute;top:0;width:145px;height:145px;background:url('../images/halloween-web.svg') no-repeat center/contain;opacity:.19}
+.web-left{left:0}.web-right{right:0;transform:scaleX(-1);width:105px;height:105px;opacity:.13}
+.halloween-fog{position:absolute;left:-15%;bottom:-70px;width:130%;height:220px;opacity:.38;background:radial-gradient(ellipse at 15% 90%,#9781b62b,transparent 48%),radial-gradient(ellipse at 65% 100%,#b3a6c52b,transparent 55%),radial-gradient(ellipse at 90% 70%,#695c9324,transparent 45%);animation:halloween-fog-drift 28s ease-in-out infinite alternate}
+@keyframes halloween-fog-drift{from{transform:translateX(-3%)}to{transform:translateX(3%)}}
+@media(max-width:600px){.halloween-web{width:75px;height:75px;opacity:.12}.halloween-moon{width:165px;right:-8px;top:-24px}.halloween-fog{height:150px;opacity:.26}}
+@media(prefers-reduced-motion:reduce){.halloween-fog{animation:none}}
